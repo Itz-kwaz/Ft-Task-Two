@@ -26,30 +26,13 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.fromLTRB(15.0, 50.0, 0.0, 0.0),
-                    child: Text('Hello',
-                        style: TextStyle(
-                            fontSize: 80.0, fontWeight: FontWeight.bold)),
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(16.0, 115.0, 0.0, 0.0),
-                    child: Text('There',
-                        style: TextStyle(
-                            fontSize: 80.0, fontWeight: FontWeight.bold)),
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(220.0, 115.0, 0.0, 0.0),
-                    child: Text('.',
-                        style: TextStyle(
-                            fontSize: 80.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.green)),
-                  )
-                ],
-              ),
+                    padding: EdgeInsets.fromLTRB(60.0, 60.0, 0.0, 0.0),
+                    child: SizedBox(width: 200,
+                    height: 50,
+                    child:Image.asset('assets/google.png'),
+                    ) ,
+
+
             ),
             Container(
                 padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
@@ -104,7 +87,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: RaisedButton(shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0),
                           side: BorderSide(color: Colors.black))
                         ,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => SignupPage()),);
+                        },
                         color: Colors.white,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -115,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             SizedBox(width: 10.0),
                             Center(
-                              child: Text('Log in with GOOGLE',
+                              child: Text('Sign Up with GOOGLE',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold
                                   )),
@@ -134,10 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 5.0),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignupPage()),);
-                  },
+                  onTap: () {},
                   child: Text(
                     'Register',
                     style: TextStyle(
