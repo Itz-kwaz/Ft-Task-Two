@@ -29,19 +29,19 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Stack(
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.fromLTRB(15.0, 80.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(15.0, 50.0, 0.0, 0.0),
                     child: Text('Hello',
                         style: TextStyle(
                             fontSize: 80.0, fontWeight: FontWeight.bold)),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(16.0, 145.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(16.0, 115.0, 0.0, 0.0),
                     child: Text('There',
                         style: TextStyle(
                             fontSize: 80.0, fontWeight: FontWeight.bold)),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(220.0, 155.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(220.0, 115.0, 0.0, 0.0),
                     child: Text('.',
                         style: TextStyle(
                             fontSize: 80.0,
@@ -89,28 +89,40 @@ class _MyHomePageState extends State<MyHomePage> {
 
                     ),
                     SizedBox(height: 40.0),
-                    Container(
-                      height: 40.0,
-                      child: Material(
-                        borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.greenAccent,
-                        color: Colors.green,
-                        elevation: 7.0,
-                        child: GestureDetector(
-                          onTap: () {},
-                          child: Center(
-                            child: Text(
-                              'LOGIN',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold
-                                 ),
-                            ),
-                          ),
-                        ),
+                    SizedBox(width: double.infinity,
+                    child: RaisedButton(shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0)),
+                      onPressed: () {},
+                      color: Colors.green,
+                      child: const Text(
+                          'LOGIN',
+                          style: TextStyle(fontSize: 20, color: Colors.white)
                       ),
-                    ),
+                    ),),
+
                     SizedBox(height: 20.0),
+                    SizedBox(width: double.infinity,
+                      child: RaisedButton(shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0),
+                          side: BorderSide(color: Colors.black))
+                        ,
+                        onPressed: () {},
+                        color: Colors.white,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Center(
+                              child:
+                              ImageIcon(AssetImage('assets/google_logo.png')),
+                            ),
+                            SizedBox(width: 10.0),
+                            Center(
+                              child: Text('Log in with GOOGLE',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold
+                                  )),
+                            )
+                          ],
+                        ),
+                      ),),
                   ],
                 )),
             SizedBox(height: 15.0),
@@ -118,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'New to Ft Task Two?',
+                  'New to Ft_task_two?',
                 ),
                 SizedBox(width: 5.0),
                 GestureDetector(
@@ -185,7 +197,6 @@ class SignupPage extends StatefulWidget {
                       decoration: InputDecoration(
                           labelText: 'EMAIL',
                           labelStyle: TextStyle(
-                              fontFamily: 'Montserrat',
                               fontWeight: FontWeight.bold,
                               color: Colors.grey),
                           // hintText: 'EMAIL',
@@ -198,7 +209,6 @@ class SignupPage extends StatefulWidget {
                       decoration: InputDecoration(
                           labelText: 'PASSWORD ',
                           labelStyle: TextStyle(
-                              fontFamily: 'Montserrat',
                               fontWeight: FontWeight.bold,
                               color: Colors.grey),
                           focusedBorder: UnderlineInputBorder(
@@ -210,7 +220,6 @@ class SignupPage extends StatefulWidget {
                       decoration: InputDecoration(
                           labelText: 'SLACK ID ',
                           labelStyle: TextStyle(
-                              fontFamily: 'Montserrat',
                               fontWeight: FontWeight.bold,
                               color: Colors.grey),
                           focusedBorder: UnderlineInputBorder(
