@@ -29,19 +29,19 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Stack(
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(15.0, 80.0, 0.0, 0.0),
                     child: Text('Hello',
                         style: TextStyle(
                             fontSize: 80.0, fontWeight: FontWeight.bold)),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(16.0, 175.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(16.0, 145.0, 0.0, 0.0),
                     child: Text('There',
                         style: TextStyle(
                             fontSize: 80.0, fontWeight: FontWeight.bold)),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(220.0, 175.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(220.0, 155.0, 0.0, 0.0),
                     child: Text('.',
                         style: TextStyle(
                             fontSize: 80.0,
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-                padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
+                padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
                 child: Column(
                   children: <Widget>[
                     TextField(
@@ -157,7 +157,7 @@ class SignupPage extends StatefulWidget {
               child: Stack(
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(15.0, 80.0, 0.0, 0.0),
                     child: Text(
                       'Signup',
                       style:
@@ -165,7 +165,7 @@ class SignupPage extends StatefulWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(260.0, 125.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(260.0, 80.0, 0.0, 0.0),
                     child: Text(
                       '.',
                       style: TextStyle(
